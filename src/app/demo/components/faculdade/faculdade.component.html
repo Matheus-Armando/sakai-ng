@@ -1,0 +1,14 @@
+<!-- src/app/agenda/agenda.component.html -->
+<div class="agenda">
+    <h2>Minha Agenda</h2>
+    <ul>
+      <li *ngFor="let evento of eventos">{{ evento }}</li>
+    </ul>
+  
+    <form (submit)="adicionarEvento()">
+      <label for="novoEvento">Novo Evento:</label>
+      <input type="text" id="novoEvento" [(ngModel)]="novoEvento" required>
+      <button type="submit">Adicionar</button>
+    </form>
+  </div>
+  
